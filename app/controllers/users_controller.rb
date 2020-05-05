@@ -14,6 +14,11 @@ class UsersController < ApplicationController
         User.create(user_params)
     end
 
+    #詳細情報を表示するためのアクション
+    def show
+        @user = User.find(params[:id])
+    end
+
     #ストロングパラメーター
     private
     def user_params
