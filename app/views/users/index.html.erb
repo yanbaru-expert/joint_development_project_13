@@ -3,5 +3,6 @@
 <% @users.each do |user| %>
 	<p>
 		<%= user.title %>
+		<%= link_to "詳細", user_path(user.id)%>
 	</p>
 <% end %>
