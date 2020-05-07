@@ -3,5 +3,7 @@
 <% @messages.each do |message| %>
   <p><br>
     <%= message.title %>
+    <%= link_to "詳細", message_path(message.id)%>
+    <%= link_to "編集", edit_message_path(message), method: :get %>
   </p>
 <% end %>
